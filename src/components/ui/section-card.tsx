@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { cn } from "@/lib/utils";
+
 type SectionCardProps = {
   eyebrow?: string;
   title: string;
@@ -19,7 +21,10 @@ export function SectionCard({
 }: SectionCardProps) {
   return (
     <section
-      className={`rounded-[28px] border border-white/50 bg-white/75 p-6 shadow-[0_20px_70px_rgba(6,24,44,0.08)] backdrop-blur ${className}`}
+      className={cn(
+        "rounded-[28px] border border-white/50 bg-white/75 p-6 shadow-[0_20px_70px_rgba(6,24,44,0.08)] backdrop-blur",
+        className,
+      )}
     >
       <div className="mb-6 flex items-start justify-between gap-4">
         <div className="space-y-2">
